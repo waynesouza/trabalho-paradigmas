@@ -41,7 +41,7 @@
 		<dependency>
 			<groupId>jpl</groupId>
 			<artifactId>jpl</artifactId>
-			<version>7.4.0</version>
+			<version>7.0.1</version>
 		</dependency>
 	</dependencies>
 

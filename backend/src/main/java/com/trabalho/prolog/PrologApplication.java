@@ -1,6 +1,5 @@
 package com.trabalho.prolog;
 
-import org.jpl7.Atom;
 import org.jpl7.Query;
 import org.jpl7.Term;
 import org.springframework.boot.SpringApplication;
@@ -13,17 +12,16 @@ public class PrologApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(PrologApplication.class, args);
-		Query query = new Query("consult", new Term[] {
-				new Atom("~/Documentos/ifmg/trabalho-paradigmas/arvore.pl")
-		});
-		query.hasSolution();
 
-		Query q = new Query("gerou(ivo,X).");
+		Query q = new Query("consult('arvore.pl')");
+		q.hasSolution();
+
+		q = new Query("gerou(X,Y).");
 
 		Map<String, Term>[] res = q.allSolutions();
 
-		for(int i = 0; i < res.length; i++) {
-			System.out.println(res[i]);
+		for (Map<String, Term> re : res) {
+			System.out.println(re);
 		}
 	}
 
