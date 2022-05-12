@@ -9,6 +9,4 @@ public class ConsultaDTO implements Serializable {
 
     private String consulta;
 
-    private String arquivoPl;
-
 }

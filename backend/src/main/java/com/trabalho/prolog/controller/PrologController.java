@@ -5,10 +5,9 @@ import com.trabalho.prolog.service.dto.ArquivoDTO;
 import com.trabalho.prolog.service.dto.ConsultaDTO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.jpl7.Term;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Map;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/prolog")
@@ -24,8 +23,8 @@ public class PrologController {
         prologService.preencherBaseConhecimento(dto);
     }
 
-    @GetMapping("/consultar")
-    public Map<String, Term>[] gerarConsulta(@RequestBody ConsultaDTO dto) {
+    @PostMapping("/consultar")
+    public List<String> gerarConsulta(@RequestBody ConsultaDTO dto) {
         return prologService.gerarConsulta(dto);
     }
 }

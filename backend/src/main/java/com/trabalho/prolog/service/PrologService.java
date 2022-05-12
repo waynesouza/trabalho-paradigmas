@@ -7,6 +7,8 @@ import org.jpl7.Query;
 import org.jpl7.Term;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 @Service
@@ -16,17 +18,22 @@ public class PrologService implements ArquivoUtil {
         lerArquivo(dto.getArquivoXlsx(), dto.getArquivoPl());
     }
 
-    public Map<String, Term>[] gerarConsulta(ConsultaDTO dto) {
-        Query q = new Query("consult('" + dto.getArquivoPl() + "')");
+    public List<String> gerarConsulta(ConsultaDTO dto) {
+        String arquivoProlog = "/home/wayne/Documentos/ifmg/trabalho-paradigmas/arquivos/arquivo-prolog.pl";
+        Query q = new Query("consult('" + arquivoProlog + "')");
         q.hasSolution();
         q = new Query(dto.getConsulta());
 
-        Map<String, Term>[] res = q.allSolutions();
+        List<String> result = new ArrayList<>();
+        Map<String, Term>[] solutions = q.allSolutions();
 
-        for (Map<String, Term> re : res) {
-            System.out.println(re);
+        for(int i = 0; i < solutions.length; i++) {
+            if(!(solutions[i].isEmpty() || solutions.length == 0)) {
+                result.add(solutions[i].get("X").toString());
+            }
+                result.add(solutions[i].toString());
         }
 
-        return res;
+        return result;
     }
 }
