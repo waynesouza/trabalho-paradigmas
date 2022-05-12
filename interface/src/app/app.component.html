@@ -1,0 +1,92 @@
+<div class="div-principal cover-container d-flex w-100 h-100 p-3 mx-auto flex-column py-5">
+  <header class="mb-auto">
+    <div>
+      <h2 class="mb-2">Trabalho Prático - Paradigmas</h2>
+      <h5 class="mb-0">Alunos: Rafael Neto e Wayne Souza</h5>
+    </div>
+  </header>
+
+  <main class="px-3 my-5">
+    <h3>Paradigma Lógico</h3>
+    <hr>
+    <div class="mb-3 row">
+      <div class="col-12">
+        <label class="form-label"> Verifique se um produto qualquer foi comprado </label>
+      </div>
+      <div class="col-10">
+        <input type="password" class="form-control mb-2" placeholder="Entre com o nome do produto" [(ngModel)]="ask1">
+      </div>
+      <div class="col-2">
+        <a class="btn btn-secondary fw-bold border-white bg-white" (click)="verificaProduto()">Verificar</a>
+      </div>
+      <div class="form-text">Resposta da API</div>
+    </div>
+
+    <hr>
+    <div class="mb-3 row">
+      <div class="col-12">
+        <label class="form-label"> Verifique qual foi a quantidade total comprada de um produto </label>
+      </div>
+      <div class="col-10">
+        <input type="password" class="form-control mb-2" placeholder="Entre com o nome do produto" [(ngModel)]="ask2">
+      </div>
+      <div class="col-2">
+        <a class="btn btn-secondary fw-bold border-white bg-white" (click)="verificaQtdTotal()">Verificar</a>
+      </div>
+      <div class="form-text">Resposta da API</div>
+    </div>
+
+    <hr>
+    <div class="mb-3 row">
+      <div class="col-12">
+        <label class="form-label"> Verifique qual foi o valor total comprada de um produto </label>
+      </div>
+      <div class="col-10">
+        <input type="password" class="form-control mb-2" placeholder="Entre com o nome do produto" [(ngModel)]="ask3">
+      </div>
+      <div class="col-2">
+        <a class="btn btn-secondary fw-bold border-white bg-white" (click)="verificaValorTotal()">Verificar</a>
+      </div>
+      <div class="form-text">Resposta da API</div>
+    </div>
+
+    <hr>
+    <div class="mb-3 row">
+      <div class="col-12">
+        <label class="form-label"> Verifique o que foi comprado na data </label>
+      </div>
+      <div class="col-10">
+        <input type="password" class="form-control mb-2" placeholder="Entre com o data desejada" [(ngModel)]="ask4">
+      </div>
+      <div class="col-2">
+        <a class="btn btn-secondary fw-bold border-white bg-white" (click)="verificaData()">Verificar</a>
+      </div>
+      <div class="form-text">Resposta da API</div>
+    </div>
+
+    <hr>
+    <div class="mb-3 row">
+      <div class="col-12">
+        <label class="form-label"> Verifique qual o total de compras em uma loja </label>
+      </div>
+      <div class="col-10">
+        <input type="password" class="form-control mb-2" placeholder="Entre com o nome da loja" [(ngModel)]="ask5">
+      </div>
+      <div class="col-2">
+        <a class="btn btn-secondary fw-bold border-white bg-white" (click)="verificaTotalLoja()">Verificar</a>
+      </div>
+      <div class="form-text">Resposta da API</div>
+    </div>
+
+    <hr>
+    <div class="mb-3">
+      <label class="form-label"> Veja qual foi o produto mais comprado: </label>
+      <div class="form-text">Resposta da API</div>
+    </div>
+
+  </main>
+
+  <footer class="mt-auto text-white-50">
+    <p>IFMG - Campus Formiga</p>
+  </footer>
+</div>
