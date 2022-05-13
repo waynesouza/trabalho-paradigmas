@@ -14,12 +14,12 @@
         <label class="form-label"> Verifique se um produto qualquer foi comprado </label>
       </div>
       <div class="col-10">
-        <input type="password" class="form-control mb-2" placeholder="Entre com o nome do produto" [(ngModel)]="ask1">
+        <input class="form-control mb-2" placeholder="Entre com o nome do produto" [(ngModel)]="ask1">
       </div>
       <div class="col-2">
-        <a class="btn btn-secondary fw-bold border-white bg-white" (click)="verificaProduto()">Verificar</a>
+        <a class="btn btn-secondary fw-bold border-white bg-white text-black" (click)="verificaProduto()">Verificar</a>
       </div>
-      <div class="form-text">Resposta da API</div>
+      <div class="form-text">{{ resp1 }}</div>
     </div>
 
     <hr>
@@ -28,12 +28,12 @@
         <label class="form-label"> Verifique qual foi a quantidade total comprada de um produto </label>
       </div>
       <div class="col-10">
-        <input type="password" class="form-control mb-2" placeholder="Entre com o nome do produto" [(ngModel)]="ask2">
+        <input class="form-control mb-2" placeholder="Entre com o nome do produto" [(ngModel)]="ask2">
       </div>
       <div class="col-2">
-        <a class="btn btn-secondary fw-bold border-white bg-white" (click)="verificaQtdTotal()">Verificar</a>
+        <a class="btn btn-secondary fw-bold border-white bg-white text-black" (click)="verificaQtdTotal()">Verificar</a>
       </div>
-      <div class="form-text">Resposta da API</div>
+      <div class="form-text">{{ resp2 }}</div>
     </div>
 
     <hr>
@@ -42,12 +42,12 @@
         <label class="form-label"> Verifique qual foi o valor total comprada de um produto </label>
       </div>
       <div class="col-10">
-        <input type="password" class="form-control mb-2" placeholder="Entre com o nome do produto" [(ngModel)]="ask3">
+        <input class="form-control mb-2" placeholder="Entre com o nome do produto" [(ngModel)]="ask3">
       </div>
       <div class="col-2">
-        <a class="btn btn-secondary fw-bold border-white bg-white" (click)="verificaValorTotal()">Verificar</a>
+        <a class="btn btn-secondary fw-bold border-white bg-white text-black" (click)="verificaValorTotal()">Verificar</a>
       </div>
-      <div class="form-text">Resposta da API</div>
+      <div class="form-text">{{ resp3 }}</div>
     </div>
 
     <hr>
@@ -56,12 +56,12 @@
         <label class="form-label"> Verifique o que foi comprado na data </label>
       </div>
       <div class="col-10">
-        <input type="password" class="form-control mb-2" placeholder="Entre com o data desejada" [(ngModel)]="ask4">
+        <input class="form-control mb-2" placeholder="Entre com o data desejada. Ex.: 23-09-2021" [(ngModel)]="ask4">
       </div>
       <div class="col-2">
-        <a class="btn btn-secondary fw-bold border-white bg-white" (click)="verificaData()">Verificar</a>
+        <a class="btn btn-secondary fw-bold border-white bg-white text-black" (click)="verificaData()">Verificar</a>
       </div>
-      <div class="form-text">Resposta da API</div>
+      <div class="form-text">{{ resp4 }}</div>
     </div>
 
     <hr>
@@ -70,18 +70,18 @@
         <label class="form-label"> Verifique qual o total de compras em uma loja </label>
       </div>
       <div class="col-10">
-        <input type="password" class="form-control mb-2" placeholder="Entre com o nome da loja" [(ngModel)]="ask5">
+        <input class="form-control mb-2" placeholder="Entre com o nome da loja" [(ngModel)]="ask5">
       </div>
       <div class="col-2">
-        <a class="btn btn-secondary fw-bold border-white bg-white" (click)="verificaTotalLoja()">Verificar</a>
+        <a class="btn btn-secondary fw-bold border-white bg-white text-black" (click)="verificaTotalLoja()">Verificar</a>
       </div>
-      <div class="form-text">Resposta da API</div>
+      <div class="form-text">{{ resp5 }}</div>
     </div>
 
     <hr>
     <div class="mb-3">
       <label class="form-label"> Veja qual foi o produto mais comprado: </label>
-      <div class="form-text">Resposta da API</div>
+      <div class="form-text">{{ resp6 }}</div>
     </div>
 
   </main>

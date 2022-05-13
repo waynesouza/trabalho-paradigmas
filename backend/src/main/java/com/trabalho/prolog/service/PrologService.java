@@ -19,7 +19,7 @@ public class PrologService implements ArquivoUtil {
     }
 
     public List<String> gerarConsulta(ConsultaDTO dto) {
-        String arquivoProlog = "/home/wayne/Documentos/ifmg/trabalho-paradigmas/arquivos/arquivo-prolog.pl";
+        String arquivoProlog = "arquivos/arquivo-prolog.pl";
         Query q = new Query("consult('" + arquivoProlog + "')");
         q.hasSolution();
         q = new Query(dto.getConsulta());
