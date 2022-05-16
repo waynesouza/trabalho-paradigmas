@@ -8,6 +8,7 @@ import { ConsultaService } from "./service/consulta.service";
 })
 export class AppComponent implements OnInit{
   title = 'interface';
+  path: string = '';
   ask1?: string;
   resp1: string = '';
   ask2?: string;
@@ -26,6 +27,12 @@ export class AppComponent implements OnInit{
 
   ngOnInit(): void {
     this.verificaProdutoMaisVendito();
+  }
+
+  preencherBase() {
+    this.consultaService.preencherBaseConhecimento(this.path).subscribe(() => {
+      alert('Base de conhecimento preenchida com sucesso !');
+    })
   }
 
   verificaProduto() {

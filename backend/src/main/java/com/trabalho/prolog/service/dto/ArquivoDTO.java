@@ -9,6 +9,4 @@ public class ArquivoDTO implements Serializable {
 
     private String arquivoXlsx;
 
-    private String arquivoPl;
-
 }

@@ -11,6 +11,19 @@
     <hr>
     <div class="mb-3 row">
       <div class="col-12">
+        <label class="form-label"> Caminho do arquivo XLSX </label>
+      </div>
+      <div class="col-10">
+        <input class="form-control mb-2" placeholder="Entre com o caminho do arquivo" [(ngModel)]="path">
+      </div>
+      <div class="col-2">
+        <a class="btn btn-secondary fw-bold border-white bg-white text-black" (click)="preencherBase()">Preencher</a>
+      </div>
+    </div>
+
+    <hr>
+    <div class="mb-3 row">
+      <div class="col-12">
         <label class="form-label"> Verifique se um produto qualquer foi comprado </label>
       </div>
       <div class="col-10">

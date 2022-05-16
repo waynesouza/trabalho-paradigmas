@@ -15,7 +15,7 @@ import java.util.Map;
 public class PrologService implements ArquivoUtil {
 
     public void preencherBaseConhecimento(ArquivoDTO dto) {
-        lerArquivo(dto.getArquivoXlsx(), dto.getArquivoPl());
+        lerArquivo(dto.getArquivoXlsx(), "arquivos/arquivo-prolog.pl");
     }
 
     public List<String> gerarConsulta(ConsultaDTO dto) {
