@@ -28,7 +28,7 @@ public class PrologService implements ArquivoUtil {
         Map<String, Term>[] solutions = q.allSolutions();
 
         for(int i = 0; i < solutions.length; i++) {
-            if(!(solutions[i].isEmpty() || solutions.length == 0)) {
+            if(!solutions[i].isEmpty()) {
                 result.add(solutions[i].get("X").toString());
             } else {
                 result.add(solutions[i].toString());
